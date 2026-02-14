@@ -1,0 +1,265 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html{ scroll-behavior:smooth; }
+
+body{
+  background:#e7e7e7;   /* full landing page body color */
+  color:#111;
+}
+
+/* NAVBAR */
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:999;
+  background:#2f2f2f;
+}
+
+.nav-inner{
+  width:92%;
+  margin:0 auto;
+  height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  color:#fff;
+  font-size:30px;
+  font-weight:900;
+  letter-spacing:1px;
+}
+
+.menu{
+  display:flex;
+  gap:34px;
+}
+
+.menu a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  font-size:15px;
+}
+
+.menu a:hover{opacity:.85;}
+
+/* HERO */
+.hero{
+  height:85vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:#bfbfbf; 
+}
+
+.hero-content{
+  width:min(1100px, 92%);
+}
+
+.hero-content h1{
+  font-size:65px;
+  font-weight:900;
+  color:#fff;
+  text-shadow: 0 6px 14px rgba(0,0,0,0.35);
+  margin-bottom:18px;
+}
+
+.hero-content p{
+  font-size:22px;
+  line-height:1.55;
+  color:#fff;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.35);
+  margin-bottom:28px;
+}
+
+.hero-btn{
+  display:inline-block;
+  padding:14px 38px;
+  background:#fff;
+  color:#111;
+  text-decoration:none;
+  font-weight:750;
+  border-radius:6px;
+  box-shadow:0 12px 26px rgba(0,0,0,0.35);
+}
+
+/* SECTION BASE */
+.section{
+  padding:70px 0;
+}
+
+.wrap{
+  width:92%;
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.center{text-align:center;}
+
+.sub{
+  margin-top:6px;
+  color:#444;
+  font-size:14px;
+  margin-bottom:44px;
+}
+
+/* SERVICES GRID */
+.cards{
+  width:min(1050px, 100%);
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:34px;
+}
+
+.card{
+  background:#ffffff; /* like reference cards */
+  padding:34px 18px;
+  border-radius:6px;
+  box-shadow:0 10px 22px rgba(0,0,0,0.12);
+  text-align:center;
+}
+
+.circle-img{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  margin:0 auto 16px;
+  background-image:url("https://media.timeout.com/images/105658195/image.jpg");
+  background-size:cover;
+  background-position:center;
+}
+
+.card h3{
+  font-size:20px;
+  font-weight:900;
+  margin-bottom:10px;
+}
+
+.card p{
+  font-size:14px;
+  color:#333;
+  line-height:1.55;
+  max-width:260px;
+  margin:0 auto;
+}
+
+/* ABOUT */
+.about{
+  width:min(1200px, 100%);
+  margin:0 auto;
+  text-align:left;
+}
+
+.about h4{
+  font-size:20px;
+  font-weight:900;
+  margin:22px 0 10px;
+}
+
+.about p{
+  font-size:16px;
+  color:#222;
+  line-height:1.8;
+}
+
+.about ul{
+  padding-left:22px;
+  margin-top:10px;
+  font-size:16px;
+  color:#222;
+  line-height:1.9;
+}
+
+/* CONTACT */
+.contact{
+  width:min(1200px, 100%);
+  margin:0 auto;
+  display:flex;
+  gap:70px;
+  align-items:flex-start;
+  justify-content:space-between;
+}
+
+.contact-left{
+  flex:1;
+  text-align:left;
+  font-size:18px;
+  color:#222;
+  line-height:2.2;
+}
+
+.contact-right{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.contact-right input,
+.contact-right textarea{
+  width:100%;
+  padding:14px 12px;
+  border:1px solid #cfcfcf;
+  font-size:15px;
+  outline:none;
+  background:#fff;
+}
+
+.contact-right button{
+  width:210px;
+  padding:13px 16px;
+  background:#2f2f2f;
+  color:#fff;
+  border:none;
+  cursor:pointer;
+  border-radius:4px;
+}
+
+.contact-right button:hover{opacity:.9;}
+
+/* RESPONSIVE */
+@media (max-width: 1050px){
+  .hero-content h1{font-size:56px;}
+  .cards{grid-template-columns:repeat(2,1fr);}
+}
+
+@media (max-width: 650px){
+  .nav-inner{
+    height:auto;
+    padding:16px 0;
+    flex-direction:column;
+    gap:12px;
+  }
+
+  .menu{
+    gap:18px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .hero{
+    height:auto;
+    padding:80px 0;
+  }
+
+  .hero-content h1{font-size:38px;}
+  .hero-content p{font-size:16px;}
+
+  .cards{grid-template-columns:1fr;}
+
+  .contact{
+    flex-direction:column;
+    gap:28px;
+  }
+
+  .contact-left{font-size:16px;}
+}
