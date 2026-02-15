@@ -50,18 +50,35 @@ body{
 
 .menu a:hover{opacity:.85;}
 
-/* HERO */
+/* HERO (NOW WITH IMAGE + OVERLAY) */
 .hero{
   height:85vh;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
-  background:#bfbfbf; 
+
+  /*  local image */
+  background-image: url("assets/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+}
+
+/* dark overlay like reference */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,0.35);
 }
 
 .hero-content{
   width:min(1100px, 92%);
+  position: relative; /* above overlay */
+  z-index: 1;
 }
 
 .hero-content h1{
@@ -133,7 +150,9 @@ body{
   height:140px;
   border-radius:50%;
   margin:0 auto 16px;
-  background-image:url("https://media.timeout.com/images/105658195/image.jpg");
+
+  /*  local image */
+  background-image:url("assets/service.jpg");
   background-size:cover;
   background-position:center;
 }
